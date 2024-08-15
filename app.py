@@ -97,4 +97,8 @@ if st.button("Analysis Image"):
         st.markdown(st.session_state['result'], unsafe_allow_html=True)
         os.unlink(st.session_state['filename'])
 
-
+if "result" in st.session_state or os.path.exists(st.session_state['result']):
+    if st.info("Explain easier"):
+        if st.radio("Do you want explain simpler",("No","Yes"))=="Yes":
+            simple_explain = chat_eli(st.session_state['result'])
+            st.markdown(simple_explain,unsafe_allow_html=True)
