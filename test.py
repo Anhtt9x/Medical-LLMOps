@@ -6,7 +6,7 @@ payload = { "payload": "what is machine learning" }
 headers = {
     "accept": "application/json",
     "content-type": "application/json",
-    "Apikey": "Api-Key rUzH2Aqr.h5rNDPkaA51b1Z2sqPQvaISGKKrU3Qun"
+    "Apikey": "Api-Key "
 }
 
 response = requests.post(url, json=payload, headers=headers)
